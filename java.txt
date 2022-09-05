@@ -1,0 +1,242 @@
+class soln01 {
+    public static void main(String[] args) {
+        System.out.println("This is Nitish Here :)");
+
+    }
+}
+
+***********
+
+
+class namePrinter {
+    String name;
+
+    namePrinter(String name) {
+        this.name = name;
+
+    }
+
+    public void details() {
+        System.out.println("This is " + name + " here :)");
+    }
+
+}
+
+public class soln02 {
+    public static void main(String[] args) {
+
+        namePrinter inst = new namePrinter("Nitish Kamath");
+        inst.details();
+    }
+
+}
+***************
+
+
+
+class helper {
+    static void meth1(String name) {
+        System.out.println("This is " + name + " here :)");
+    }
+
+}
+
+
+public class soln03 {
+    public static void main(String[] args) {
+        helper.meth1("Nitish");
+
+    }
+
+}
+*************
+
+public class soln04 {
+    public static void main(String[] args) {
+
+        // using println
+
+
+        // using print
+            System.out.print(1 + " ");
+            System.out.print(2 + " ");
+            System.out.print(3 + " ");
+            System.out.print(4 + " ");
+
+
+        // using printf
+        for (int i = 1; i <= 4; i++) {
+            System.out.printf("%d ", i);
+
+        }
+
+    }
+
+}
+
+
+*************
+import java.util.*;
+
+public class soln05 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hey User!! Pls Enter two Number");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println("sum = " + (a + b));
+        System.out.println("product = " + (a * b));
+        System.out.println("difference = " + (a - b));
+        System.out.println("quotient = " + (a / b));
+
+        sc.close();
+    }
+}
+
+**************
+import java.util.Scanner;
+
+public class soln06 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hey User, Pls!! Enter Two Number ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (a == b)
+            System.out.println("These Numbers are Equal");
+        else if (a > b)
+            System.out.println(a + " is larger");
+        else
+            System.out.println(b + " is larger");
+        sc.close();
+
+    }
+
+}
+
+
+*****************
+
+import java.util.Scanner;
+
+public class soln07 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hey user, Pls!! Enter a Number");
+        int a = sc.nextInt();
+        if (a % 2 == 0)
+            System.out.println("Number is Even");
+        else
+            System.out.println("Number is Odd");
+        sc.close();
+    }
+
+}
+******************
+import java.util.Scanner;
+
+public class soln08 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Hey User!! Pls, Enter two number");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if (a % b == 0)
+            System.out.println("yes num1 is multiple of num2");
+
+        sc.close();
+    }
+
+}
+******************
+
+
+import java.util.Scanner;
+
+public class soln09 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Hey User!! Pls, Enter radius");
+        int r = sc.nextInt();
+        System.out.printf("%f", 2 * r);
+        System.out.printf("%f", 2 * Math.PI * r);
+        System.out.printf("%f", Math.PI * r * r);
+
+        sc.close();
+        
+    }
+
+}
+
+******************
+import java.util.*;
+
+public class soln10 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hey User !! Please Enter 5 digit number");
+        int n = sc.nextInt();
+
+        String num = String.valueOf(n);
+        int len = num.length();
+        if (len != 5)
+            System.out.println("Not a valid length");
+        else {
+            for (int i = 0; i < len; i++) {
+                System.out.print(num.charAt(i) + " ");
+            }
+        }
+
+        sc.close();
+
+    }
+}
+**************
+
+public class soln11 {
+    public static void main(String[] args) {
+        System.out.println("number\tsquare\tcube");
+
+        for (int i = 0; i <= 10; i++) {
+            int sq = i * i;
+            int cb = i * i * i;
+            System.out.printf("%d\t%d\t%d\n",i,sq,cb);
+        }
+
+    }
+}
+
+**************************
+import java.util.Scanner;
+
+public class soln12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int arr[] = new int[5];
+        int pos = 0, neg = 0, zer = 0;
+        System.out.println("Hey User!! Pls, Enter five Number");
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+            if (arr[i] > 0)
+                pos++;
+            else if (arr[i] < 0)
+                neg++;
+            else
+                zer++;
+
+        }
+        System.out.println("Number of Pos Number, Neg Number and zero input" + pos + " " + neg + " " + zer);
+    }
+
+}
+
+
