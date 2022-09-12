@@ -1,0 +1,87 @@
+
+import java.util.*;
+interface stack
+{   
+    
+    void push();
+    void pop();
+    void top();
+   
+}
+
+class helper implements stack
+{
+        Scanner sc = new Scanner(System.in);
+        public int n = 100;
+         public int k = 0;
+        int arr[] = new int[n];
+
+   public void push()
+    {
+    if(k!= n )
+    {
+         System.out.println("Enter value for input");
+        int val = sc.nextInt();
+        
+        arr[k] = val;
+        k++;
+    }
+    else
+        System.out.println("you are running out of space");
+    }
+
+    public void pop()
+    {
+        if(k != -1)
+         k--;
+        else
+        {
+              System.out.println("Sorry!! You cann't pop further");
+        }
+    }
+
+    public void top()
+    {
+        if(k != 0)
+        {
+        int p = k -1;
+        System.out.println("printing top Element" + arr[p]);
+        }
+
+    }
+
+}
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        helper inst = new helper();
+        int ch;
+        int ch_opt;
+        Scanner sc = new Scanner(System.in);
+        while(true)
+        {
+            System.out.println("Do you want to push(1/0):-");
+            ch = sc.nextInt();
+            if(ch == 1)
+            inst.push();
+            System.out.println("Do you want to pop(1/0):-");
+            ch = sc.nextInt();
+            if(ch == 1)
+            inst.pop();
+            System.out.println("Do you want to see top Element:-");
+            ch = sc.nextInt();
+            if(ch == 1)
+         inst.top();
+
+            System.out.println("Do you want to continue:-");
+            ch_opt = sc.nextInt();
+            if(ch_opt == 0)
+            break;
+
+
+        }
+    }
+
+}
