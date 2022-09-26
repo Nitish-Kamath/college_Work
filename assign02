@@ -1,0 +1,343 @@
+import java.util.Scanner;
+
+class soln01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a, b;
+        int ch;
+        // System.out.println();
+
+        do {
+            System.out.println("Enter Two Number:-");
+            a = sc.nextInt();
+            b = sc.nextInt();
+            System.out.println("sum of numbers " + (a + b));
+            System.out.println("Do you wanna continue(1/0) :-");
+            ch = sc.nextInt();
+            if (ch == 0)
+                break;
+
+        } while (true);
+        sc.close();
+    }
+}
+
+
+*********************************************
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class soln02 {
+    public static void main(String[] args) {
+        System.out.println();
+        Scanner sc = new Scanner(System.in);
+        int inp;
+
+        while (true) {
+            System.out.println("Guess a Number ranging b/w 1 and 100");
+            inp = sc.nextInt();
+            int val = (int) (Math.random() * 100) + 1;
+            if (inp > val) {
+                System.out.println("Too High, try Again :( ");
+            } else if (inp < val)
+                System.out.println("Too low,try Again :(");
+            else {
+                System.out.println("Hey Buddy !! You are right :)");
+                break;
+            }
+
+        }
+
+        sc.close();
+    }
+
+}
+
+***********************************************
+
+public class soln03 {
+    public static void main(String[] args) {
+
+        // Pattern01
+        // for (int i = 0; i <4; i++) {
+        // for (int j = 0; j < 10; j++) {
+        // System.out.print("*" + " ");
+        // }
+        // System.out.println();
+        // }
+
+        // Pattern02
+        // for (int i = 0; i < 5; i++) {
+        // for (int j = 0; j < i + 1; j++) {
+        // System.out.print("*" + " ");
+        // }
+        // System.out.println();
+        // }
+
+        // Pattern03
+        // for (int i = 0; i < 5; i++) {
+        // for (int j = 0; j < 5; j++) {
+        // if (j >= 4 - i)
+        // System.out.print("*" + " ");
+        // else
+        // System.out.print(" " + " ");
+
+        // }
+        // System.out.println();
+        // }
+
+        // Pattern04
+        // for (int i = 0; i < 5; i++) {
+        // for (int j = 0; j < 9; j++) {
+        // if (j >= 4 - i && j <= 4 + i)
+        // System.out.print("*" + " ");
+        // else
+        // System.out.print(" " + " ");
+
+        // }
+        // System.out.println();
+        // }
+
+        // Pattern05
+        // int k = 1;
+        // for (int i = 0; i < 5; i++) {
+        // for (int j = 0; j < 9; j++) {
+        // if (j >= 4 - i && j <= 4 + i)
+        // System.out.print(k + " ");
+        // else
+        // System.out.print(" " + " ");
+
+        // }
+        // k++;
+        // System.out.println();
+        // }
+
+        // Pattern06
+        // int k = 1;
+        // for (int i = 0; i < 5; i++) {
+        //     for (int j = 0; j < 9; j++) {
+        //         if (j >= 4 - i && j <= 4 + i) {
+        //             System.out.print(k + " ");
+        //             if (j < 4)
+        //                 k--;
+        //             else
+        //                 k++;
+        //         } else
+        //             System.out.print(" " + " ");
+
+        //     }
+        //     System.out.println();
+        // }
+
+    }
+
+}
+*************************************************
+
+
+class Invoice {
+
+    private String partNum;
+    private String desc;
+    private int quantity;
+    private double price;
+
+    Invoice() {
+        partNum = "";
+        desc = "";
+        quantity = 0;
+        price = 0.0;
+    }
+
+    public void setPartNum(String partNum) {
+        this.partNum = partNum;
+    }
+
+    public String getPartNum() {
+        return partNum;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setQuantity(int quantity) {
+        if (quantity < 0)
+            this.quantity = 0;
+        else
+            this.quantity = quantity;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setPrice(double price) {
+        if (price < 0.0)
+            this.price = 0.0;
+        else
+            this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getInvoiceAmount() {
+        return quantity * price;
+    }
+
+}
+
+class InvoiceTest {
+    public static void main(String[] args) {
+
+        Invoice inst = new Invoice();
+        inst.setPartNum("A0210D");
+        inst.setDesc("Latest Model");
+        inst.setPrice(-10);
+        inst.setQuantity(10);
+
+        System.out.println("Part Number: " + inst.getPartNum());
+        System.out.println("Description: " + inst.getDesc());
+        System.out.println("Quantity: " + inst.getPrice());
+        System.out.println("Price: " + inst.getQuantity());
+        System.out.println("Invoice Amount: " + inst.getInvoiceAmount());
+
+    }
+}
+
+*************************************************************************
+class Employee {
+    private String first_name;
+    private String last_name;
+    private double monthly_salary;
+
+    Employee() {
+        first_name = "";
+        last_name = "";
+        monthly_salary = 0.0;
+    }
+
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+
+    }
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    public void setLast_Name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setMonthly_salary(double monthly_salary) {
+        if (monthly_salary < 0.0)
+            monthly_salary = 0.0;
+        else
+            this.monthly_salary = monthly_salary;
+    }
+
+    public double getMonthly_salary() {
+        return monthly_salary;
+    }
+
+}
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Employee inst1 = new Employee();
+        Employee inst2 = new Employee();
+
+        // for Employee_01
+        inst1.setFirst_name("Bob");
+        inst1.setLast_Name("Jones");
+        inst1.setMonthly_salary(2875.00);
+
+        System.out.println("Employee 1: " + inst1.getFirst_name() + " " + inst1.getLast_name() + "; Yearly Salary: "
+                + 12 * inst1.getMonthly_salary());
+
+        // for Employee_02
+        inst2.setFirst_name("Susan");
+        inst2.setLast_Name("Baker");
+        inst2.setMonthly_salary(3150.75);
+
+        System.out.println("Employee 2: " + inst2.getFirst_name() + " " + inst2.getLast_name() + "; Yearly Salary: "
+                + 12 * inst2.getMonthly_salary());
+
+        System.out.println("Increasing Employee Salaries by 10%");
+
+        System.out.println("Employee 1: " + inst1.getFirst_name() + " " + inst1.getLast_name() + "; Yearly Salary: "
+                + 12 * 1.1 * inst1.getMonthly_salary());
+        System.out.println("Employee 2: " + inst2.getFirst_name() + " " + inst2.getLast_name() + "; Yearly Salary: "
+                + 12 * 1.1 * inst2.getMonthly_salary());
+
+    }
+
+}
+
+
+**************************************************************************
+class Date {
+    private int day;
+    private int month;
+    private int year;
+
+    Date() {
+        day = 0;
+        month = 0;
+        year = 0;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void display() {
+        System.out.println(month + "/" + day + "/" + year);
+    }
+
+}
+
+public class DateTest {
+    public static void main(String[] args) {
+        Date inst = new Date();
+        inst.setMonth(7);
+        inst.setDay(4);
+        inst.setYear(2004);
+        inst.display();
+
+    }
+
+}
